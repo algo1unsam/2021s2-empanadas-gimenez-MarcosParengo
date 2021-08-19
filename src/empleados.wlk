@@ -6,12 +6,12 @@ object galvan {
 	method sueldo() { return sueldo	}
 	method sueldo(nuevoValor) {	sueldo = nuevoValor	}	//Renovar Sueldo
 	
-	method cobrarSueldo(cantidad){
-		if(deuda<cantidad){
-			dinero=+cantidad-deuda
+	method cobrarSueldo(monto){
+		if(deuda<monto){
+			dinero=+monto-deuda
 			deuda=0
 		}else{
-			deuda-=cantidad
+			deuda-=monto
 		}
 	}
 	
@@ -42,8 +42,8 @@ object baigorria {
 
 	method sueldo() = cantidadEmpanadasVendidas * montoPorEmpanada
 	
-	method cobrarSueldo(cantidad){
-		todoLoQueCobro+=cantidad
+	method cobrarSueldo(monto){
+		todoLoQueCobro+=monto
 	}
 }
 
