@@ -3,7 +3,6 @@ object galvan {
 	var dinero=0
 	var deuda=0
 	
-	method sueldo() { return sueldo	}
 	method sueldo(nuevoValor) {	sueldo = nuevoValor	}	//Renovar Sueldo
 	
 	method cobrarSueldo(monto){
@@ -23,16 +22,14 @@ object galvan {
 			dinero-=cuanto
 		}
 	}
-	method totalDeuda(){
-		return(deuda)
-	}
-	method totalDinero(){
-		return(dinero)
-	}
+	method deuda()= deuda
+	method dinero()= dinero
+	method sueldo() = sueldo	
+	
 }
 
 object baigorria {
-	var todoLoQueCobro=0
+	var totalCobrado=0
 	var cantidadEmpanadasVendidas = 0
 	const montoPorEmpanada = 15
 	
@@ -43,7 +40,13 @@ object baigorria {
 	method sueldo() = cantidadEmpanadasVendidas * montoPorEmpanada
 	
 	method cobrarSueldo(monto){
-		todoLoQueCobro+=monto
+		totalCobrado+=monto
+	}
+	method totalCobrado(){
+		return totalCobrado
+	}
+	method cantidadEmpanadasVendidas(){
+		return cantidadEmpanadasVendidas
 	}
 }
 
